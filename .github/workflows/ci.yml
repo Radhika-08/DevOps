@@ -1,0 +1,21 @@
+name: DevOps Day03 CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+    - name: Verify Files
+      run: |
+        ls -la
